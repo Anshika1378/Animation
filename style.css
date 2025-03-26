@@ -1,0 +1,60 @@
+ body{
+	  display: flex;
+	  justify-content: center;
+	  align-item: center;
+	  height: 100vh;
+	  background-color: #f0f0f0;
+	  prespective: 1000px;
+	}
+	.scene{
+	   width: 100px;
+	   height:100px;
+	   position: relative;
+	   transform-style: preserve-3d;
+	   animation: rotateCube 24s infinite ease-in-out;
+	}
+	 .face{
+	     position: absolute;
+		 width: 100px;
+		 height: 100px;
+		 background: rgba(255,255,255,0.9);
+		 border: 1px solid #ccc;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+		 font-size: 24px;
+		 font-family: Arial, sans-serif;
+		 color: #333;
+		 }	
+	@keyframes rotateCube{ 
+	 0% , 100%{ transform: rotateX(0deg) rotateY(0deg);}
+	  16.67%{ transform:  rotateY(90deg);}
+	  33.33%{ transform:  rotateY(180deg);}
+	  50%{ transform:  rotateY(270deg);}
+	  66.67%{ transform: rotateX(-90deg) ;}
+	  83.33%{ transform:   rotateX(90deg);}
+    }
+ 
+		 .front{
+		  transform: rotateY(0deg) translateZ(50px);
+		  background-color: blue;
+		}
+		.right{
+		  transform: rotateY(90deg) translateZ(50px);
+		  background-color: green;
+		}.back{
+		  transform: rotateY(180deg) translateZ(50px);
+		  background-color: red;
+		}
+		.left{
+		  transform: rotateY(-90deg) translateZ(50px);
+		  background-color: yellow;
+		}
+		.top{
+		  transform: rotateX(90deg) translateZ(50px);
+		  background-color: purple;
+		}
+		.bottom{
+		  transform: rotateX(-90deg) translateZ(50px);
+		  background-color: orange;
+		}
